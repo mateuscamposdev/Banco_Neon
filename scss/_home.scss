@@ -3,30 +3,37 @@
     height: 78.6rem;
     background: url('../img/bg-hero.svg') no-repeat center center;
     padding-top: 17.5rem;
+
     .container {
         @include flex(row, flex-start, space-between)
     }
+
     .hero-text {
         width: 100%;
         max-width: 68.4rem;
+
         h3 {
             opacity: 0.8;
             color: #ffffff;
             font-weight: 600;
             margin-bottom: 3.2rem;
         }
+
         h1 {
             color: #ffffff;
             margin-bottom: 3.9rem;
         }
+
         ul {
             width: 100%;
             max-width: 62.1rem;
             margin-top: 6.4rem;
             @include flex(row, center, space-between);
+
             li {
                 display: flex;
                 align-items: center;
+
                 .icon {
                     width: 4.8rem;
                     height: 4.8rem;
@@ -35,6 +42,7 @@
                     @include flex(row, center, center);
                     margin-right: 1.2rem;
                 }
+
                 span {
                     font-size: 1.8rem;
                     line-height: 2.2rem;
@@ -43,10 +51,12 @@
             }
         }
     }
+
     .area-image {
         width: 100%;
         max-width: 70.6rem;
         margin-right: -17.4rem;
+
         h2 {
             margin-bottom: 6.7rem;
             text-align: center;
@@ -54,27 +64,105 @@
             opacity: 0.4;
             font-weight: 600;
         }
+
         .image {
             position: relative;
             top: 3.5rem;
             width: 100%;
             height: 54.1rem;
+
             img {
                 position: absolute;
             }
+
             .card-front {
                 z-index: 2;
                 top: 4.1rem;
                 left: 0;
             }
+
             .card-back {
                 z-index: 1;
                 bottom: 4.6rem;
                 right: 8.6rem;
             }
+
             .circle {
                 top: 2.8rem;
                 right: 4.3rem;
+            }
+        }
+    }
+}
+
+.s-card-neon {
+    padding-top: 12.9rem;
+
+    .left-area {
+        width: 100%;
+        max-width: 27.7rem;
+
+        .ilustra-mockup {
+            width: 100%;
+            max-width: 27.7rem;
+            position: relative;
+            margin-bottom: 12.9rem;
+
+            .circle {
+                position: absolute;
+                z-index: -1;
+                top: 8.7rem;
+                left: -21.4rem;
+                max-width: 37.7rem;
+            }
+        }
+
+        .text {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .icon {
+                position: relative;
+                &::before {
+                    content: "";
+                    width: .5rem;
+                    height: 8.3rem;
+                    background-image: url('../img/points.svg');
+                    position: absolute;
+                    top: -10.4rem;
+                    left: 50%;
+                    margin-left: -2.5px;
+                }
+            }
+            .info-txt {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h3 {
+                    text-align: center;
+                    margin-top: 3.6rem;
+                    letter-spacing: -0.5px;
+                    color: $gray-600;
+                }
+
+                p {
+                    text-align: center;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    line-height: 2.4rem;
+                    color: $gray-400;
+                    opacity: .8rem;
+                    margin-bottom: 2.6rem;
+                }
+                ul {
+                    li {
+                        &:not(:last-child) {
+                            margin-bottom: 2.6rem;
+                        }
+                    }
+                }
             }
         }
     }
