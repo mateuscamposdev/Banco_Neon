@@ -1,4 +1,5 @@
 header {
+    background-color: $brand-blue;
     position: absolute;
     top: 0;
     left: 0;
@@ -35,6 +36,45 @@ header {
                         color: $brand-yellow;
                     }
                 }
+            }
+        }
+    }
+
+    .btn-mobile {
+        display: none;
+        margin-left: 4rem;
+    }
+
+    @include responsive(1080px) {
+        nav {
+            ul {
+                margin-right: 3rem;
+                li {
+                    &:not(:first-child) {
+                        margin-left: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive(991px) {
+        .logo {
+            max-width: 10.8rem;
+        }
+        .btn-mobile {
+            display: block;
+        }
+        nav {
+            ul {
+                display: none;
+            }
+        }
+    }
+    @include responsive(480px) {
+        height: 7.3rem;
+        nav {
+            .btn-secondary {
+                display: none;
             }
         }
     }
